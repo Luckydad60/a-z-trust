@@ -1,0 +1,27 @@
+.testimonial {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 40px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.test-text {
+    font-size: 25px ;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    
+}
+
+.test-text p {
+    padding-bottom: 10px;
+}
+
+.test-text span {
+    color: rgb(5, 0,255);
+}
