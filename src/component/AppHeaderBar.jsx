@@ -11,15 +11,18 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { useNavigate } from "react-router-dom";
+
 
 
 
 import logo from "../trust-logo.jpg"
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Connect'];
 
 function AppHeaderBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
 
   const handleOpenUserMenu = (event) => {
@@ -28,15 +31,18 @@ function AppHeaderBar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+    navigate('/import')
+
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+    navigate('/import')
   };
 
 
+ 
 
-  
  
   return (
    
@@ -61,7 +67,7 @@ function AppHeaderBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <span style={{color: "rgba(5, 0,255, 1)"}}>TRUST</span>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "end"}}>
             {pages.map((page) => (
@@ -105,7 +111,7 @@ function AppHeaderBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  <Typography  sx={{ textAlign: 'center' }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
